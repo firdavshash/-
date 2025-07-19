@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Замечательная Семья</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Установка шрифта Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Легкий серый фон */
+            color: #333;
+            overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+        }
+
+        /* Анимация для фоновой картинки */
+        .background-animated {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://placehold.co/1920x1080/e0e7ff/6366f1?text=Семейное+Фото'); /* Замените на реальное семейное фото */
+            background-size: cover;
+            background-position: center center;
+            animation: panBackground 60s linear infinite alternate; /* Медленное движение фона */
+            z-index: -1; /* Отправляем фон назад */
+            filter: brightness(0.7) blur(2px); /* Затемнение и легкое размытие для читаемости текста */
+        }
+
+        @keyframes panBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Дополнительные стили для улучшения дизайна */
+        .card-section {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8 lg:p-10 relative">
+    <!-- Анимированный фон -->
+    <div class="background-animated"></div>
+
+    <div class="max-w-4xl mx-auto bg-white bg-opacity-90 rounded-xl shadow-2xl p-6 sm:p-8 md:p-10 lg:p-12 relative z-10">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-700 mb-4 text-shadow">Моя Замечательная Семья</h1>
+            <p class="text-lg sm:text-xl text-gray-600 text-shadow">Познакомьтесь с моими любимыми!</p>
+        </header>
+
+        <main class="space-y-8">
+            <!-- Папа -->
+            <section class="flex flex-col sm:flex-row items-center bg-blue-50 p-6 rounded-lg shadow-md card-section">
+                <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <img src="https://placehold.co/120x120/a7f3d0/10b981?text=Отабек" alt="Изображение Папы" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-blue-300 shadow-md">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-blue-800 mb-2">Мой Папа - Отабек</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Мой папа Отабек работает, он очень хороший и никогда не бьет меня. Он всегда дает мне деньги, когда мне нужно.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Мама -->
+            <section class="flex flex-col sm:flex-row items-center bg-pink-50 p-6 rounded-lg shadow-md card-section">
+                <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <img src="https://placehold.co/120x120/fbcfe8/ec4899?text=Умида" alt="Изображение Мамы" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-pink-300 shadow-md">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-pink-800 mb-2">Моя Мама - Умида</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Мама Умида всегда дает мне разные идеи и очень помогает. Она стирает одежду и готовит вкусную еду для всей семьи.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Бабушка -->
+            <section class="flex flex-col sm:flex-row items-center bg-green-50 p-6 rounded-lg shadow-md card-section">
+                <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <img src="https://placehold.co/120x120/d1fae5/059669?text=Нигора" alt="Изображение Бабушки" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-green-300 shadow-md">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-green-800 mb-2">Моя Бабушка - Нигора</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Моя бабушка Нигора — мой защитник. Если мама или папа ругают меня, она всегда встает на мою сторону и защищает меня.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Средний Брат -->
+            <section class="flex flex-col sm:flex-row items-center bg-yellow-50 p-6 rounded-lg shadow-md card-section">
+                <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <img src="https://placehold.co/120x120/fef3c7/d97706?text=Фузайил" alt="Изображение Среднего Брата" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-yellow-300 shadow-md">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-yellow-800 mb-2">Мой Средний Брат - Фузайил</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Мой средний брат Фузайил любит играть на улице. Он очень шумный, но с ним никогда не бывает скучно!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Младший Братик -->
+            <section class="flex flex-col sm:flex-row items-center bg-purple-50 p-6 rounded-lg shadow-md card-section">
+                <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <img src="https://placehold.co/120x120/ede9fe/8b5cf6?text=Зубаер" alt="Изображение Младшего Братика" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-purple-300 shadow-md">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-2">Мой Младший Братик - Зубаер</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Мой младший братик Зубаер очень хороший. Он всегда разговаривает со мной, и мы отлично проводим время вместе.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Будущий Братик -->
+            <section class="flex flex-col sm:flex-row items-center bg-indigo-50 p-6 rounded-lg shadow-md card-section">
+                <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <img src="https://placehold.co/120x120/e0e7ff/6366f1?text=Зайид" alt="Изображение Будущего Братика" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-indigo-300 shadow-md">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-indigo-800 mb-2">Мой Будущий Братик - Зайид</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        У меня скоро появится еще один младший братик! Его будут звать Зайид, и я думаю, что он будет очень хорошим братиком.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-10 text-gray-500 text-sm">
+            <p>&copy; 2025 Моя Семья. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
